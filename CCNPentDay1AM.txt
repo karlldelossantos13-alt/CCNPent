@@ -75,13 +75,13 @@ WARNING: IF YOU SEE AMBER/ORANGE= NEEDS FIXING!!!
 Trunk Ports: switch to switch:
 TAAS/BABA:
 config t
-Int Range fa0/10-12
+int Range fa0/10-12
  ! shutdown
  no shutdown
- switchport trunk Encap Dot1Q      ## STED 
- switchport mode trunk			   ## SMT 
- switchport trunk allowed vlan all ## STAV
- switchport trunk native vlan 1    ## STNV
+ switchport trunk Encap Dot1Q      !! STED 
+ switchport mode trunk			   !! SMT 
+ switchport trunk allowed vlan all !! STAV
+ switchport trunk native vlan 1    !! STNV
  do sh int trunk
 end
 
@@ -89,9 +89,9 @@ CCNPSkillsNow: Etherchannel with LinkAggregationControlProtocol:
 WARNING: THREE CABLES IS BETTER THAN ONE!
 @taas/BABA:
 config t
-Int Range fa0/10-12
- channel-group 1 mode active		## CGMA
- channel-protocol Lacp				## CPL 
+int Range fa0/10-12
+ channel-group 1 mode active		!! CGMA
+ channel-protocol Lacp				!! CPL 
  do sh etherchannel summary
  do sh int po1 | inc BW
 
@@ -704,6 +704,7 @@ exit
           
 sip-ua
 sip-server ipv4:192.168.k.1
+
 
 
 
